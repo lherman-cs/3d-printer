@@ -44,3 +44,7 @@ RUN curl -L -o octo-print.zip https://github.com/foosel/OctoPrint/archive/1.3.10
     cd OctoPrint-1.3.10 && \
     virtualenv venv && \
     ./venv/bin/python setup.py install
+
+EXPOSE 5000
+VOLUME ["/root/.octoprint"]
+CMD /OctoPrint-1.3.10/venv/bin/octoprint --iknowwhatimdoing
